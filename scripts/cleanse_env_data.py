@@ -3,8 +3,7 @@ import logging
 
 import numpy as np
 import pandas as pd
-from shapely.geometry import LineString, MultiPolygon, Polygon
-from shapely.ops import polygonize, unary_union
+from shapely import from_wkt, make_valid
 
 from constants import *
 
@@ -14,32 +13,29 @@ logger = logging.getLogger(__name__)
 
 env_filenames = ENV_FILENAMES
 
-def correct_invalid_geometries(df):
-  geoms = list(df['WKT'].values)
-  geoms = [geom.lstrip('POLYGON ((').rstrip('))').split(',') for geom in geoms]
 
-  x = dict()
-  y = dict()
-  for i, geom in enumerate(geoms):
-    x[i] = []
-    y[i] = []
-    for vertex in geom:
-      xy = vertex.split(' ')
-      x[i].append(float(xy[0].lstrip('(').rstrip(')')))
-      y[i].append(float(xy[1].lstrip('(').rstrip(')')))
+def polygon_parts(geom):
+  if geom.is_empty:
+    return
+  if geom.geom_type == 'Polygon':
+    yield geom
+  elif geom.geom_type in ('MultiPolygon', 'GeometryCollection'):
+    for part in geom.geoms:
+      yield from polygon_parts(part)
+
+
+def correct_invalid_geometries(df):
+  geoms = [from_wkt(wkt) for wkt in df['WKT'].values]
 
   dst = []
-  for geom_id, ((_, xs), (_, ys)) in enumerate(zip(x.items(), y.items())):
-    geoms = [[x_, y_] for x_, y_ in zip(xs, ys)]
-    polygon = Polygon(geoms)
+  for polygon in geoms:
     if polygon.is_valid:
       dst.append(polygon.wkt)
       continue
 
-    ls = LineString(geoms)
-    mls = unary_union(ls)
-    for polygon in list(polygonize(mls)):
-      dst.append(polygon.wkt)
+    repaired = make_valid(polygon)
+    for part in polygon_parts(repaired):
+      dst.append(part.wkt)
 
   print(f'len(dst): {len(dst)}')
   return dst

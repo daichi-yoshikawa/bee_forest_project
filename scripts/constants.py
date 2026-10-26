@@ -1,5 +1,5 @@
 RAW_ENV_DATA_PATH = '../data/元環境ジオデータ'
-CLEANSED_ENV_DATA_PATH = '../data/環境ジオデータ'
+CLEANSED_ENV_DATA_PATH = '../data/環境ジオデータ_修正版'
 PROCESSED_ENV_DATA_PATH = (
     '../../data/03022021/manually_processed_env_data_in_gpkg')
 
