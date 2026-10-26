@@ -1,0 +1,290 @@
+<!DOCTYPE qgis-layer-definition>
+<qlr>
+  <layer-tree-group checked="Qt::Checked" expanded="1" name="">
+    <customproperties/>
+    <layer-tree-layer legend_exp="" source="Polygon?crs=EPSG:3857&amp;field=fid:long(0,0)&amp;field=%E9%80%A3%E7%95%AA:integer(0,0)&amp;field=BF-%20No:integer(0,0)&amp;field=%E3%83%93%E3%83%BC%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88%E5%90%8D:string(0,0)&amp;field=%E5%B7%A3%E7%AE%B1NO:integer(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E4%BD%8D%E7%BD%AEY:double(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E4%BD%8D%E7%BD%AEX:double(0,0)&amp;field=%E5%96%B6%E5%B7%A3%E7%8E%87:string(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E7%B7%AF%E5%BA%A6N%20%E7%B5%8C%E5%BA%A6E:string(0,0)&amp;field=field_9:string(0,0)&amp;field=field_10:string(0,0)&amp;uid={d50f4419-d27a-4819-8300-602a3c14b746}" checked="Qt::Checked" providerKey="memory" expanded="1" id="出力レイヤ_93ac13eb_1931_4191_86b7_231b15b62f59" name="出力レイヤ">
+      <customproperties/>
+    </layer-tree-layer>
+  </layer-tree-group>
+  <maplayers>
+    <maplayer maxScale="0" geometry="Polygon" minScale="1e+08" autoRefreshTime="0" simplifyDrawingHints="1" readOnly="0" styleCategories="AllStyleCategories" refreshOnNotifyMessage="" simplifyAlgorithm="0" type="vector" simplifyMaxScale="1" simplifyDrawingTol="1" autoRefreshEnabled="0" labelsEnabled="0" hasScaleBasedVisibilityFlag="0" wkbType="Polygon" simplifyLocal="1" refreshOnNotifyEnabled="0">
+      <extent>
+        <xmin>15102222.93280144594609737</xmin>
+        <ymin>4024970.90856214193627238</ymin>
+        <xmax>15155384.25757512263953686</xmax>
+        <ymax>4131737.8854895131662488</ymax>
+      </extent>
+      <id>出力レイヤ_93ac13eb_1931_4191_86b7_231b15b62f59</id>
+      <datasource>memory?geometry=Polygon&amp;crs=EPSG:3857&amp;field=fid:int8(0,0)&amp;field=%E9%80%A3%E7%95%AA:integer(0,0)&amp;field=BF-%20No:integer(0,0)&amp;field=%E3%83%93%E3%83%BC%E3%83%95%E3%82%A9%E3%83%AC%E3%82%B9%E3%83%88%E5%90%8D:string(0,0)&amp;field=%E5%B7%A3%E7%AE%B1NO:integer(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E4%BD%8D%E7%BD%AEY:double(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E4%BD%8D%E7%BD%AEX:double(0,0)&amp;field=%E5%96%B6%E5%B7%A3%E7%8E%87:string(0,0)&amp;field=%E5%B7%A3%E7%AE%B1%E7%B7%AF%E5%BA%A6N%20%E7%B5%8C%E5%BA%A6E:string(0,0)&amp;field=field_9:string(0,0)&amp;field=field_10:string(0,0)</datasource>
+      <keywordList>
+        <value></value>
+      </keywordList>
+      <layername>出力レイヤ</layername>
+      <srs>
+        <spatialrefsys>
+          <wkt>PROJCS["WGS 84 / Pseudo-Mercator",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Mercator_1SP"],PARAMETER["central_meridian",0],PARAMETER["scale_factor",1],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],EXTENSION["PROJ4","+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs"],AUTHORITY["EPSG","3857"]]</wkt>
+          <proj4>+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs</proj4>
+          <srsid>3857</srsid>
+          <srid>3857</srid>
+          <authid>EPSG:3857</authid>
+          <description>WGS 84 / Pseudo-Mercator</description>
+          <projectionacronym>merc</projectionacronym>
+          <ellipsoidacronym>WGS84</ellipsoidacronym>
+          <geographicflag>false</geographicflag>
+        </spatialrefsys>
+      </srs>
+      <resourceMetadata>
+        <identifier></identifier>
+        <parentidentifier></parentidentifier>
+        <language></language>
+        <type></type>
+        <title></title>
+        <abstract></abstract>
+        <links/>
+        <fees></fees>
+        <encoding></encoding>
+        <crs>
+          <spatialrefsys>
+            <wkt></wkt>
+            <proj4></proj4>
+            <srsid>0</srsid>
+            <srid>0</srid>
+            <authid></authid>
+            <description></description>
+            <projectionacronym></projectionacronym>
+            <ellipsoidacronym></ellipsoidacronym>
+            <geographicflag>false</geographicflag>
+          </spatialrefsys>
+        </crs>
+        <extent/>
+      </resourceMetadata>
+      <provider encoding="">memory</provider>
+      <vectorjoins/>
+      <layerDependencies/>
+      <dataDependencies/>
+      <legend type="default-vector"/>
+      <expressionfields/>
+      <map-layer-style-manager current="デフォルト">
+        <map-layer-style name="デフォルト"/>
+      </map-layer-style-manager>
+      <auxiliaryLayer/>
+      <flags>
+        <Identifiable>1</Identifiable>
+        <Removable>1</Removable>
+        <Searchable>1</Searchable>
+      </flags>
+      <renderer-v2 type="singleSymbol" enableorderby="0" symbollevels="0" forceraster="0">
+        <symbols>
+          <symbol type="fill" alpha="1" clip_to_extent="1" name="0" force_rhr="0">
+            <layer class="SimpleFill" pass="0" enabled="1" locked="0">
+              <prop k="border_width_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="color" v="231,113,72,255"/>
+              <prop k="joinstyle" v="bevel"/>
+              <prop k="offset" v="0,0"/>
+              <prop k="offset_map_unit_scale" v="3x:0,0,0,0,0,0"/>
+              <prop k="offset_unit" v="MM"/>
+              <prop k="outline_color" v="35,35,35,255"/>
+              <prop k="outline_style" v="solid"/>
+              <prop k="outline_width" v="0.26"/>
+              <prop k="outline_width_unit" v="MM"/>
+              <prop k="style" v="solid"/>
+              <data_defined_properties>
+                <Option type="Map">
+                  <Option type="QString" value="" name="name"/>
+                  <Option name="properties"/>
+                  <Option type="QString" value="collection" name="type"/>
+                </Option>
+              </data_defined_properties>
+            </layer>
+          </symbol>
+        </symbols>
+        <rotation/>
+        <sizescale/>
+      </renderer-v2>
+      <customproperties>
+        <property key="dualview/previewExpressions">
+          <value>"fid"</value>
+        </property>
+      </customproperties>
+      <blendMode>0</blendMode>
+      <featureBlendMode>0</featureBlendMode>
+      <layerOpacity>1</layerOpacity>
+      <geometryOptions removeDuplicateNodes="0" geometryPrecision="0">
+        <activeChecks type="StringList">
+          <Option type="QString" value=""/>
+        </activeChecks>
+        <checkConfiguration/>
+      </geometryOptions>
+      <fieldConfiguration>
+        <field name="fid">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="連番">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="BF- No">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="ビーフォレスト名">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="巣箱NO">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="巣箱位置Y">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="巣箱位置X">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="営巣率">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="巣箱緯度N 経度E">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="field_9">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+        <field name="field_10">
+          <editWidget type="">
+            <config>
+              <Option/>
+            </config>
+          </editWidget>
+        </field>
+      </fieldConfiguration>
+      <aliases>
+        <alias field="fid" index="0" name=""/>
+        <alias field="連番" index="1" name=""/>
+        <alias field="BF- No" index="2" name=""/>
+        <alias field="ビーフォレスト名" index="3" name=""/>
+        <alias field="巣箱NO" index="4" name=""/>
+        <alias field="巣箱位置Y" index="5" name=""/>
+        <alias field="巣箱位置X" index="6" name=""/>
+        <alias field="営巣率" index="7" name=""/>
+        <alias field="巣箱緯度N 経度E" index="8" name=""/>
+        <alias field="field_9" index="9" name=""/>
+        <alias field="field_10" index="10" name=""/>
+      </aliases>
+      <excludeAttributesWMS/>
+      <excludeAttributesWFS/>
+      <defaults>
+        <default field="fid" expression="" applyOnUpdate="0"/>
+        <default field="連番" expression="" applyOnUpdate="0"/>
+        <default field="BF- No" expression="" applyOnUpdate="0"/>
+        <default field="ビーフォレスト名" expression="" applyOnUpdate="0"/>
+        <default field="巣箱NO" expression="" applyOnUpdate="0"/>
+        <default field="巣箱位置Y" expression="" applyOnUpdate="0"/>
+        <default field="巣箱位置X" expression="" applyOnUpdate="0"/>
+        <default field="営巣率" expression="" applyOnUpdate="0"/>
+        <default field="巣箱緯度N 経度E" expression="" applyOnUpdate="0"/>
+        <default field="field_9" expression="" applyOnUpdate="0"/>
+        <default field="field_10" expression="" applyOnUpdate="0"/>
+      </defaults>
+      <constraints>
+        <constraint field="fid" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="連番" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="BF- No" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="ビーフォレスト名" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="巣箱NO" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="巣箱位置Y" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="巣箱位置X" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="営巣率" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="巣箱緯度N 経度E" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="field_9" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+        <constraint field="field_10" constraints="0" exp_strength="0" unique_strength="0" notnull_strength="0"/>
+      </constraints>
+      <constraintExpressions>
+        <constraint field="fid" exp="" desc=""/>
+        <constraint field="連番" exp="" desc=""/>
+        <constraint field="BF- No" exp="" desc=""/>
+        <constraint field="ビーフォレスト名" exp="" desc=""/>
+        <constraint field="巣箱NO" exp="" desc=""/>
+        <constraint field="巣箱位置Y" exp="" desc=""/>
+        <constraint field="巣箱位置X" exp="" desc=""/>
+        <constraint field="営巣率" exp="" desc=""/>
+        <constraint field="巣箱緯度N 経度E" exp="" desc=""/>
+        <constraint field="field_9" exp="" desc=""/>
+        <constraint field="field_10" exp="" desc=""/>
+      </constraintExpressions>
+      <expressionfields/>
+      <attributeactions>
+        <defaultAction key="Canvas" value="{00000000-0000-0000-0000-000000000000}"/>
+      </attributeactions>
+      <attributetableconfig sortExpression="" sortOrder="0" actionWidgetStyle="dropDown">
+        <columns>
+          <column hidden="0" width="-1" type="field" name="fid"/>
+          <column hidden="0" width="-1" type="field" name="連番"/>
+          <column hidden="0" width="-1" type="field" name="BF- No"/>
+          <column hidden="0" width="-1" type="field" name="ビーフォレスト名"/>
+          <column hidden="0" width="-1" type="field" name="巣箱NO"/>
+          <column hidden="0" width="-1" type="field" name="巣箱位置Y"/>
+          <column hidden="0" width="-1" type="field" name="巣箱位置X"/>
+          <column hidden="0" width="-1" type="field" name="営巣率"/>
+          <column hidden="0" width="-1" type="field" name="巣箱緯度N 経度E"/>
+          <column hidden="0" width="-1" type="field" name="field_9"/>
+          <column hidden="0" width="-1" type="field" name="field_10"/>
+          <column hidden="1" width="-1" type="actions"/>
+        </columns>
+      </attributetableconfig>
+      <conditionalstyles>
+        <rowstyles/>
+        <fieldstyles/>
+      </conditionalstyles>
+      <storedexpressions/>
+      <editform tolerant="1"></editform>
+      <editforminit/>
+      <editforminitcodesource>0</editforminitcodesource>
+      <editforminitfilepath></editforminitfilepath>
+      <editforminitcode><![CDATA[]]></editforminitcode>
+      <featformsuppress>0</featformsuppress>
+      <editorlayout>generatedlayout</editorlayout>
+      <editable/>
+      <labelOnTop/>
+      <widgets/>
+      <previewExpression>"fid"</previewExpression>
+      <mapTip></mapTip>
+    </maplayer>
+  </maplayers>
+</qlr>
