@@ -1,14 +1,14 @@
 import geopandas as gpd
-from pathlib import Path
 from pyproj import Geod, Transformer
 from shapely import orient_polygons, transform
 
+from constants import (
+  NEST_DATA_DIR,
+  NEST_FILENAME_TEMPLATE,
+  ENV_DATA_DIR,
+  AREA_OUTPUT_DIR as OUTPUT_DIR,
+)
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-NEST_DATA_DIR = PROJECT_ROOT / 'data' / '巣箱ジオデータ'
-ENV_DATA_DIR = PROJECT_ROOT / 'data' / '環境ジオデータ_修正版'
-OUTPUT_DIR = PROJECT_ROOT / 'data' / '最終アウトプット_修正版'
 
 RADIUSES = (500, 1000, 2000)
 
@@ -82,7 +82,7 @@ def calculate_area(geometry, transformer):
 
 
 def calculate_nest_environment_intersection_areas(radius):
-  path = NEST_DATA_DIR / f'奈良2021巣箱{radius}m地理統合_統合結果.gpkg'
+  path = NEST_DATA_DIR / NEST_FILENAME_TEMPLATE.format(radius=radius)
   regions = read_polygon_data(path)
 
   # Geod requires lon/lat to calculate ellipsoidal area in m^2.
@@ -109,9 +109,9 @@ def calculate_nest_environment_intersection_areas(radius):
     invalid = ~ratios.between(0, 1 + 1e-6)
 
     if invalid.any():
-      ids = regions.loc[invalid, 'region_id'].to_list()
+      ids = regions.index[invalid].to_list()
       raise ValueError(
-        f'Invalid area ratio: radius={radius}, category={name}, region_ids={ids}'
+        f'Invalid area ratio: radius={radius}, category={name}, row_indices={ids}'
       )
 
   output = regions.drop(columns=regions.geometry.name).copy()
@@ -127,7 +127,7 @@ def calculate_nest_environment_intersection_areas(radius):
   gpkg_path = output_path.with_suffix('.gpkg')
   regions.to_file(
     gpkg_path,
-    layer='地域別環境面積{radius}m',
+    layer=f'地域別環境面積{radius}m',
     driver='GPKG',
     engine='pyogrio',
     index=False,

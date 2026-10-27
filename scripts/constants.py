@@ -1,14 +1,23 @@
-RAW_ENV_DATA_PATH = '../data/元環境ジオデータ'
-CLEANSED_ENV_DATA_PATH = '../data/環境ジオデータ_修正版'
-PROCESSED_ENV_DATA_PATH = (
-    '../../data/03022021/manually_processed_env_data_in_gpkg')
+from pathlib import Path
 
-ENV_FILENAMES = [
-    '針葉樹・竹', '緑地', '畑', '混合林', '果樹園',
-    '広葉樹', '公園', '住宅緑地',
-]
-SRC_BEEHIVE_DATA_PATH = '../../data/03022021/beehive'
-SRC_NESTING_RATE_DATA_PATH = '../../data/03022021/nesting_rate'
-DST_BEEHIVE_DATA_PATH = '../../data/03022021/beehive_dst'
-DST_NESTING_RATE_DATA_PATH = '../../data/03022021/nesting_rate_dst'
-OUTPUT_PATH = '../../data/03022021/output'
+
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+# False: aggregate by address. True: merge overlapping geographic regions.
+USE_GEOGRAPHIC_MERGE = False
+
+ENV_DATA_DIR = PROJECT_ROOT / 'data' / '環境ジオデータ_修正版'
+
+if USE_GEOGRAPHIC_MERGE:
+  NEST_DATA_DIR = PROJECT_ROOT / 'data' / '巣箱ジオデータ'
+  NEST_FILENAME_TEMPLATE = '奈良2021巣箱{radius}m地理統合_統合結果.gpkg'
+  RESULT_DIR_NAME = '地理統合結果'
+else:
+  NEST_DATA_DIR = PROJECT_ROOT / 'data' / '巣箱ジオデータ' / 'joined'
+  NEST_FILENAME_TEMPLATE = '奈良2021巣箱{radius}mユニオン.gpkg'
+  RESULT_DIR_NAME = '住所統合結果'
+
+AREA_OUTPUT_DIR = (
+  PROJECT_ROOT / 'data' / '最終アウトプット_修正版' / RESULT_DIR_NAME
+)
+CORRELATION_OUTPUT_DIR = AREA_OUTPUT_DIR / '相関解析'

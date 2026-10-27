@@ -1,12 +1,12 @@
 import numpy as np
 import pandas as pd
-from pathlib import Path
 from scipy.stats import pearsonr
 
+from constants import (
+  AREA_OUTPUT_DIR as INPUT_DIR,
+  CORRELATION_OUTPUT_DIR as OUTPUT_DIR,
+)
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-INPUT_DIR = PROJECT_ROOT / 'data' / '最終アウトプット_修正版'
-OUTPUT_DIR = INPUT_DIR / '相関解析'
 
 RADIUSES = (500, 1000, 2000)
 
