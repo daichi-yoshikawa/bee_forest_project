@@ -89,9 +89,9 @@ def calculate_nest_environment_intersection_areas(radius):
   # This transformer is used only for area measurement; intersections use the input CRS.
   transformer = Transformer.from_crs(regions.crs, 'EPSG:4326', always_xy=True)
 
-  regions['面積'] = [calculate_area(geom, transformer) for geom in regions.geometry]
+  regions['面積[m^2]'] = [calculate_area(geom, transformer) for geom in regions.geometry]
 
-  if (regions['面積'] <= 0).any():
+  if (regions['面積[m^2]'] <= 0).any():
     raise ValueError(f'Region area must be positive: {path}')
 
   environments = load_environment_geometries(regions.crs)
@@ -101,8 +101,8 @@ def calculate_nest_environment_intersection_areas(radius):
 
     areas = [calculate_area(geom, transformer) for geom in intersections]
 
-    regions[f'{name}面積'] = areas
-    regions[f'{name}面積率'] = regions[f'{name}面積'] / regions['面積']
+    regions[f'{name}面積[m^2]'] = areas
+    regions[f'{name}面積率'] = regions[f'{name}面積[m^2]'] / regions['面積[m^2]']
 
     # Allow a small numerical tolerance around the upper bound.
     ratios = regions[f'{name}面積率']
